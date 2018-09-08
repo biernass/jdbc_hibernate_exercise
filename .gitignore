@@ -78,3 +78,5 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/intellij
 /digitsRecon.txt
+/src/main/resources/META-INF/persistence.xml
+/src/main/resources/hibernate.cfg.xml
