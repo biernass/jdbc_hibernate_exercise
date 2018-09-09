@@ -1,11 +1,10 @@
 package hibernate;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-public class Osoba {
+public class Osoba2 {
 
     @Id
     @GeneratedValue
@@ -13,17 +12,18 @@ public class Osoba {
     private String imie;
     private String nazwisko;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "mieszkanie_id")
-    private Mieszkanie mieszkanie;
 
-    public Osoba() {
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Mieszkanie2> mieszkanieList;
+
+
+    public Osoba2() {
     }
 
-    public Osoba(String imie, String nazwisko, Mieszkanie mieszkanie) {
+    public Osoba2(String imie, String nazwisko, List<Mieszkanie2> mieszkanieList) {
         this.imie = imie;
         this.nazwisko = nazwisko;
-        this.mieszkanie = mieszkanie;
+        this.mieszkanieList = mieszkanieList;
     }
 
     public long getId() {
@@ -50,11 +50,11 @@ public class Osoba {
         this.nazwisko = nazwisko;
     }
 
-    public Mieszkanie getMieszkanie() {
-        return mieszkanie;
+    public List<Mieszkanie2> getMieszkanieList() {
+        return mieszkanieList;
     }
 
-    public void setMieszkanie(Mieszkanie mieszkanie) {
-        this.mieszkanie = mieszkanie;
+    public void setMieszkanieList(List<Mieszkanie2> mieszkanieList) {
+        this.mieszkanieList = mieszkanieList;
     }
 }

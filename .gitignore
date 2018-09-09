@@ -80,3 +80,5 @@ fabric.properties
 /digitsRecon.txt
 /src/main/resources/META-INF/persistence.xml
 /src/main/resources/hibernate.cfg.xml
+src/test/
+target/
