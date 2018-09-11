@@ -14,7 +14,6 @@ public class Osoba3 {
 
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "osoba3")
-    //@JoinColumn(name = "osobaOne_id")
     private List<Mieszkanie3> mieszkanieList;
 
 

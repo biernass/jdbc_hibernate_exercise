@@ -14,7 +14,7 @@ public class Mieszkanie3 {
     private int numerMieszkania;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "abc")
+    @JoinColumn(name = "osoba_id")
     private Osoba3 osoba3;
 
 

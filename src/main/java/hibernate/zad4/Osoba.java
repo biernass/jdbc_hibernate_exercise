@@ -1,6 +1,6 @@
-package hibernate;
+package hibernate.zad4;
 
-import org.hibernate.annotations.Cascade;
+import hibernate.zad4.Mieszkanie;
 
 import javax.persistence.*;
 
@@ -56,5 +56,15 @@ public class Osoba {
 
     public void setMieszkanie(Mieszkanie mieszkanie) {
         this.mieszkanie = mieszkanie;
+    }
+
+    @Override
+    public String toString() {
+        return "Osoba{" +
+                "id=" + id +
+                ", imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", mieszkanie=" + mieszkanie +
+                '}';
     }
 }

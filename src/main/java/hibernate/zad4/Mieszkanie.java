@@ -1,4 +1,4 @@
-package hibernate;
+package hibernate.zad4;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -63,5 +63,16 @@ public class Mieszkanie {
 
     public void setNumerMieszkania(int numerMieszkania) {
         this.numerMieszkania = numerMieszkania;
+    }
+
+    @Override
+    public String toString() {
+        return "Mieszkanie{" +
+                "id=" + id +
+                ", miasto='" + miasto + '\'' +
+                ", ulica='" + ulica + '\'' +
+                ", numerDomu=" + numerDomu +
+                ", numerMieszkania=" + numerMieszkania +
+                '}';
     }
 }
